@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu trúc HTML Cơ bản - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Cấu trúc HTML Cơ bản</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>HTML (HyperText Markup Language) là ngôn ngữ đánh dấu được sử dụng để tạo nên cấu trúc của trang web. Mọi trang web đều bắt đầu với một cấu trúc HTML cơ bản.</p>
+
+        <h2>Cú pháp cơ bản</h2>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Tiêu đề trang&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Nội dung trang web
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h2>Giải thích các thành phần</h2>
+        <ol>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Khai báo phiên bản HTML (HTML5)</li>
+            <li><code>&lt;html&gt;</code>: Thẻ gốc chứa toàn bộ nội dung trang web</li>
+            <li><code>&lt;head&gt;</code>: Chứa thông tin meta và các liên kết đến CSS, JavaScript</li>
+            <li><code>&lt;body&gt;</code>: Chứa nội dung hiển thị của trang web</li>
+        </ol>
+
+        <h2>Lưu ý quan trọng</h2>
+        <ul>
+            <li>Luôn bắt đầu với DOCTYPE</li>
+            <li>Sử dụng thẻ meta charset để hiển thị đúng tiếng Việt</li>
+            <li>Đặt tiêu đề trang web có ý nghĩa trong thẻ title</li>
+            <li>Cấu trúc phải đầy đủ và lồng nhau đúng thứ tự</li>
+        </ul>
+
+        <div style="margin-top: 30px;">
+            <a href="index.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>

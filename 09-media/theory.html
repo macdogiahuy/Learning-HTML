@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media trong HTML - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2, h3 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .example-output {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 10px 0;
+        }
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .format-card {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .tip-card {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Media trong HTML</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>HTML5 cung cấp các thẻ <code>&lt;audio&gt;</code> và <code>&lt;video&gt;</code> để nhúng nội dung đa phương tiện vào trang web mà không cần plugin bổ sung.</p>
+
+        <h2>Thẻ Video</h2>
+
+        <h3>Cú pháp cơ bản</h3>
+        <pre><code>&lt;video src="video.mp4" controls&gt;
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+&lt;/video&gt;</code></pre>
+
+        <h3>Với nhiều nguồn video</h3>
+        <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    &lt;source src="video.ogg" type="video/ogg"&gt;
+    Trình duyệt của bạn không hỗ trợ video HTML5.
+&lt;/video&gt;</code></pre>
+
+        <h3>Thuộc tính quan trọng</h3>
+        <ul>
+            <li><code>controls</code>: Hiển thị điều khiển video</li>
+            <li><code>autoplay</code>: Tự động phát</li>
+            <li><code>loop</code>: Phát lặp lại</li>
+            <li><code>muted</code>: Tắt tiếng</li>
+            <li><code>poster</code>: Ảnh hiển thị trước khi phát</li>
+            <li><code>width</code> và <code>height</code>: Kích thước video</li>
+            <li><code>preload</code>: Tùy chọn tải trước</li>
+        </ul>
+
+        <div class="example-output">
+            <pre><code>&lt;video controls autoplay muted
+       width="640" height="360"
+       poster="thumbnail.jpg"
+       preload="auto"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+        </div>
+
+        <h2>Thẻ Audio</h2>
+
+        <h3>Cú pháp cơ bản</h3>
+        <pre><code>&lt;audio src="audio.mp3" controls&gt;
+    Trình duyệt của bạn không hỗ trợ audio HTML5.
+&lt;/audio&gt;</code></pre>
+
+        <h3>Với nhiều nguồn audio</h3>
+        <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Trình duyệt của bạn không hỗ trợ audio HTML5.
+&lt;/audio&gt;</code></pre>
+
+        <h2>Định dạng hỗ trợ</h2>
+        <div class="format-grid">
+            <div class="format-card">
+                <h4>Video</h4>
+                <ul>
+                    <li>MP4 (.mp4)</li>
+                    <li>WebM (.webm)</li>
+                    <li>Ogg (.ogv)</li>
+                </ul>
+            </div>
+            <div class="format-card">
+                <h4>Audio</h4>
+                <ul>
+                    <li>MP3 (.mp3)</li>
+                    <li>WAV (.wav)</li>
+                    <li>Ogg (.ogg)</li>
+                    <li>AAC (.aac)</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Nhúng video từ dịch vụ bên ngoài</h2>
+
+        <h3>YouTube</h3>
+        <pre><code>&lt;iframe width="560" height="315"
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; 
+               encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+
+        <h3>Vimeo</h3>
+        <pre><code>&lt;iframe width="560" height="315"
+        src="https://player.vimeo.com/video/VIDEO_ID"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+
+        <h2>Lưu ý quan trọng</h2>
+
+        <div class="tips">
+            <div class="tip-card">
+                <h4>Tối ưu hóa</h4>
+                <ul>
+                    <li>Nén file media trước khi sử dụng</li>
+                    <li>Cung cấp nhiều định dạng khác nhau</li>
+                    <li>Sử dụng thuộc tính preload phù hợp</li>
+                </ul>
+            </div>
+
+            <div class="tip-card">
+                <h4>Khả năng tiếp cận</h4>
+                <ul>
+                    <li>Thêm phụ đề cho video</li>
+                    <li>Cung cấp bản ghi cho audio</li>
+                    <li>Thêm văn bản thay thế</li>
+                </ul>
+            </div>
+
+            <div class="tip-card">
+                <h4>Hiệu suất</h4>
+                <ul>
+                    <li>Không tự động phát khi không cần thiết</li>
+                    <li>Cân nhắc kích thước file</li>
+                    <li>Sử dụng CDN cho file lớn</li>
+                </ul>
+            </div>
+
+            <div class="tip-card">
+                <h4>Bảo mật</h4>
+                <ul>
+                    <li>Cẩn thận với autoplay</li>
+                    <li>Kiểm soát nguồn media</li>
+                    <li>Xem xét vấn đề bản quyền</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="note">
+            <p><strong>Quan trọng:</strong> Khi sử dụng media trong trang web, hãy đảm bảo bạn có quyền sử dụng nội dung và tuân thủ các quy định về bản quyền.</p>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="example.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>

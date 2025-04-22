@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách trong HTML - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2, h3 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .example-output {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 10px 0;
+        }
+        .applications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .application-card {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Danh sách trong HTML</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>HTML cung cấp ba loại danh sách khác nhau để tổ chức thông tin: danh sách không có thứ tự (unordered list), danh sách có thứ tự (ordered list), và danh sách mô tả (description list).</p>
+
+        <h2>Các loại danh sách</h2>
+
+        <h3>1. Danh sách không có thứ tự (Unordered List)</h3>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Mục thứ nhất&lt;/li&gt;
+    &lt;li&gt;Mục thứ hai&lt;/li&gt;
+    &lt;li&gt;Mục thứ ba&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <div class="example-output">
+            <ul>
+                <li>Mục thứ nhất</li>
+                <li>Mục thứ hai</li>
+                <li>Mục thứ ba</li>
+            </ul>
+        </div>
+
+        <h3>2. Danh sách có thứ tự (Ordered List)</h3>
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Bước 1&lt;/li&gt;
+    &lt;li&gt;Bước 2&lt;/li&gt;
+    &lt;li&gt;Bước 3&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <div class="example-output">
+            <ol>
+                <li>Bước 1</li>
+                <li>Bước 2</li>
+                <li>Bước 3</li>
+            </ol>
+        </div>
+
+        <h3>3. Danh sách mô tả (Description List)</h3>
+        <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Ngôn ngữ đánh dấu siêu văn bản&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Ngôn ngữ tạo kiểu cho trang web&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+        <div class="example-output">
+            <dl>
+                <dt>HTML</dt>
+                <dd>Ngôn ngữ đánh dấu siêu văn bản</dd>
+                <dt>CSS</dt>
+                <dd>Ngôn ngữ tạo kiểu cho trang web</dd>
+            </dl>
+        </div>
+
+        <h2>Thuộc tính đặc biệt</h2>
+
+        <h3>Cho danh sách có thứ tự (ol)</h3>
+        <ul>
+            <li><code>type</code>: Kiểu đánh số (1, A, a, I, i)</li>
+            <li><code>start</code>: Số bắt đầu</li>
+            <li><code>reversed</code>: Đảo ngược thứ tự</li>
+        </ul>
+
+        <pre><code>&lt;ol type="A" start="3"&gt;
+    &lt;li&gt;Mục C&lt;/li&gt;
+    &lt;li&gt;Mục D&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <div class="example-output">
+            <ol type="A" start="3">
+                <li>Mục C</li>
+                <li>Mục D</li>
+            </ol>
+        </div>
+
+        <h2>Danh sách lồng nhau</h2>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Mục 1
+        &lt;ul&gt;
+            &lt;li&gt;Mục 1.1&lt;/li&gt;
+            &lt;li&gt;Mục 1.2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Mục 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <div class="example-output">
+            <ul>
+                <li>Mục 1
+                    <ul>
+                        <li>Mục 1.1</li>
+                        <li>Mục 1.2</li>
+                    </ul>
+                </li>
+                <li>Mục 2</li>
+            </ul>
+        </div>
+
+        <h2>Ứng dụng phổ biến</h2>
+        <div class="applications">
+            <div class="application-card">
+                <h4>Menu điều hướng</h4>
+                <p>Tạo menu cho website</p>
+            </div>
+            <div class="application-card">
+                <h4>Hướng dẫn</h4>
+                <p>Liệt kê các bước thực hiện</p>
+            </div>
+            <div class="application-card">
+                <h4>Sitemap</h4>
+                <p>Hiển thị cấu trúc website</p>
+            </div>
+            <div class="application-card">
+                <h4>FAQ</h4>
+                <p>Câu hỏi thường gặp</p>
+            </div>
+        </div>
+
+        <h2>Lưu ý quan trọng</h2>
+        <div class="note">
+            <ul>
+                <li>Chỉ sử dụng <code>&lt;li&gt;</code> trong <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, hoặc các thẻ list khác</li>
+                <li>Sử dụng danh sách phù hợp với nội dung (có thứ tự/không có thứ tự)</li>
+                <li>Có thể tùy chỉnh dấu đầu dòng bằng CSS (list-style-type)</li>
+                <li>Danh sách có thể lồng nhau nhiều cấp</li>
+                <li>Danh sách mô tả thích hợp cho các cặp thuật ngữ và định nghĩa</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="example.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>

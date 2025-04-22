@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn bản và Tiêu đề trong HTML - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .example-output {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Văn bản và Tiêu đề trong HTML</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>HTML cung cấp nhiều thẻ để định dạng văn bản và tạo tiêu đề. Các thẻ này giúp tổ chức nội dung và làm cho văn bản dễ đọc hơn.</p>
+
+        <h2>Các thẻ tiêu đề</h2>
+        <pre><code>&lt;h1&gt;Tiêu đề cấp 1&lt;/h1&gt;
+&lt;h2&gt;Tiêu đề cấp 2&lt;/h2&gt;
+&lt;h3&gt;Tiêu đề cấp 3&lt;/h3&gt;
+&lt;h4&gt;Tiêu đề cấp 4&lt;/h4&gt;
+&lt;h5&gt;Tiêu đề cấp 5&lt;/h5&gt;
+&lt;h6&gt;Tiêu đề cấp 6&lt;/h6&gt;</code></pre>
+
+        <div class="example-output">
+            <h1 style="margin: 10px 0">Tiêu đề cấp 1</h1>
+            <h2 style="margin: 10px 0">Tiêu đề cấp 2</h2>
+            <h3 style="margin: 10px 0">Tiêu đề cấp 3</h3>
+            <h4 style="margin: 10px 0">Tiêu đề cấp 4</h4>
+            <h5 style="margin: 10px 0">Tiêu đề cấp 5</h5>
+            <h6 style="margin: 10px 0">Tiêu đề cấp 6</h6>
+        </div>
+
+        <h2>Các thẻ văn bản cơ bản</h2>
+        <ol>
+            <li><code>&lt;p&gt;</code>: Đoạn văn bản</li>
+            <li><code>&lt;strong&gt;</code>: Văn bản in đậm, thể hiện tầm quan trọng</li>
+            <li><code>&lt;em&gt;</code>: Văn bản in nghiêng, nhấn mạnh</li>
+            <li><code>&lt;u&gt;</code>: Gạch chân văn bản</li>
+            <li><code>&lt;br&gt;</code>: Xuống dòng</li>
+            <li><code>&lt;hr&gt;</code>: Tạo đường kẻ ngang</li>
+        </ol>
+
+        <h2>Ví dụ</h2>
+        <pre><code>&lt;p&gt;Đây là một &lt;strong&gt;đoạn văn bản&lt;/strong&gt; với &lt;em&gt;nhiều&lt;/em&gt; định dạng &lt;u&gt;khác nhau&lt;/u&gt;.&lt;/p&gt;</code></pre>
+
+        <div class="example-output">
+            <p>Đây là một <strong>đoạn văn bản</strong> với <em>nhiều</em> định dạng <u>khác nhau</u>.</p>
+        </div>
+
+        <h2>Lưu ý quan trọng</h2>
+        <ul>
+            <li>Chỉ sử dụng một thẻ <code>&lt;h1&gt;</code> trong mỗi trang</li>
+            <li>Sử dụng tiêu đề theo thứ tự từ h1 đến h6</li>
+            <li>Không sử dụng thẻ <code>&lt;br&gt;</code> để tạo khoảng cách, thay vào đó hãy dùng CSS</li>
+            <li>Thẻ <code>&lt;strong&gt;</code> và <code>&lt;em&gt;</code> không chỉ để tạo kiểu chữ mà còn mang ý nghĩa về mặt ngữ nghĩa</li>
+        </ul>
+
+        <div style="margin-top: 30px;">
+            <a href="example.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>

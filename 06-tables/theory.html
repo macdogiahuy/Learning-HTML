@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng trong HTML - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2, h3 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .example-output {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 10px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        caption {
+            padding: 10px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Bảng trong HTML</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>Bảng trong HTML được sử dụng để hiển thị dữ liệu dưới dạng các hàng và cột. Bảng thích hợp cho việc trình bày dữ liệu có tính tổ chức như thông tin sản phẩm, bảng giá, lịch trình, v.v.</p>
+
+        <h2>Cấu trúc cơ bản</h2>
+        <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Tiêu đề cột 1&lt;/th&gt;
+            &lt;th&gt;Tiêu đề cột 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dữ liệu 1&lt;/td&gt;
+            &lt;td&gt;Dữ liệu 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+        <div class="example-output">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tiêu đề cột 1</th>
+                        <th>Tiêu đề cột 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dữ liệu 1</td>
+                        <td>Dữ liệu 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Các thẻ chính</h2>
+
+        <h3>1. Thẻ cấu trúc bảng</h3>
+        <ul>
+            <li><code>&lt;table&gt;</code>: Định nghĩa một bảng</li>
+            <li><code>&lt;thead&gt;</code>: Nhóm các hàng tiêu đề</li>
+            <li><code>&lt;tbody&gt;</code>: Nhóm nội dung chính của bảng</li>
+            <li><code>&lt;tfoot&gt;</code>: Nhóm các hàng chân bảng</li>
+        </ul>
+
+        <h3>2. Thẻ hàng và ô</h3>
+        <ul>
+            <li><code>&lt;tr&gt;</code>: Định nghĩa một hàng</li>
+            <li><code>&lt;th&gt;</code>: Ô tiêu đề</li>
+            <li><code>&lt;td&gt;</code>: Ô dữ liệu</li>
+        </ul>
+
+        <h2>Thuộc tính quan trọng</h2>
+
+        <h3>Gộp ô</h3>
+        <h4>1. colspan: Gộp các cột</h4>
+        <pre><code>&lt;td colspan="2"&gt;Ô này chiếm 2 cột&lt;/td&gt;</code></pre>
+
+        <div class="example-output">
+            <table>
+                <tr>
+                    <td colspan="2">Ô này chiếm 2 cột</td>
+                </tr>
+                <tr>
+                    <td>Cột 1</td>
+                    <td>Cột 2</td>
+                </tr>
+            </table>
+        </div>
+
+        <h4>2. rowspan: Gộp các hàng</h4>
+        <pre><code>&lt;td rowspan="2"&gt;Ô này chiếm 2 hàng&lt;/td&gt;</code></pre>
+
+        <div class="example-output">
+            <table>
+                <tr>
+                    <td rowspan="2">Ô này chiếm 2 hàng</td>
+                    <td>Hàng 1</td>
+                </tr>
+                <tr>
+                    <td>Hàng 2</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Ví dụ mở rộng</h2>
+        <pre><code>&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Sản phẩm&lt;/th&gt;
+            &lt;th&gt;Giá&lt;/th&gt;
+            &lt;th&gt;Số lượng&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Sản phẩm A&lt;/td&gt;
+            &lt;td&gt;100.000đ&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Sản phẩm B&lt;/td&gt;
+            &lt;td&gt;200.000đ&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Tổng cộng:&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
+        <div class="example-output">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sản phẩm A</td>
+                        <td>100.000đ</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Sản phẩm B</td>
+                        <td>200.000đ</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Tổng cộng:</td>
+                        <td>8</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <h2>Lưu ý quan trọng</h2>
+        <div class="note">
+            <ol>
+                <li>Sử dụng bảng CHỈ để hiển thị dữ liệu dạng bảng, không dùng để tạo layout</li>
+                <li>Luôn sử dụng <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, và <code>&lt;tfoot&gt;</code> để cấu trúc bảng rõ ràng</li>
+                <li>Sử dụng <code>&lt;th&gt;</code> cho các ô tiêu đề để tăng tính ngữ nghĩa</li>
+                <li>Cân nhắc sử dụng CSS để tạo kiểu cho bảng thay vì thuộc tính HTML</li>
+                <li>Thêm thuộc tính <code>scope</code> cho <code>&lt;th&gt;</code> để cải thiện khả năng truy cập</li>
+                <li>Sử dụng <code>&lt;caption&gt;</code> để thêm tiêu đề cho bảng</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="example.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>

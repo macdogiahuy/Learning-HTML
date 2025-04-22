@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình ảnh trong HTML - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .example-output {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 10px 0;
+        }
+        .image-formats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .format-card {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        figure {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        figcaption {
+            margin-top: 10px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Hình ảnh trong HTML</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>Thẻ <code>&lt;img&gt;</code> được sử dụng để hiển thị hình ảnh trong trang web. Đây là thẻ tự đóng (không cần thẻ đóng).</p>
+
+        <h2>Cú pháp cơ bản</h2>
+        <pre><code>&lt;img src="đường-dẫn-ảnh" alt="mô tả ảnh"&gt;</code></pre>
+
+        <h2>Thuộc tính quan trọng</h2>
+
+        <h3>1. src (bắt buộc)</h3>
+        <p>Đường dẫn đến file hình ảnh, có thể là đường dẫn tương đối hoặc tuyệt đối:</p>
+        <pre><code>&lt;img src="images/photo.jpg"&gt;
+&lt;img src="https://example.com/photo.jpg"&gt;</code></pre>
+
+        <h3>2. alt (bắt buộc)</h3>
+        <p>Văn bản thay thế khi ảnh không tải được:</p>
+        <pre><code>&lt;img src="cat.jpg" alt="Một chú mèo đang nằm ngủ"&gt;</code></pre>
+        <div class="example-output">
+            <img src="missing-image.jpg" alt="Một chú mèo đang nằm ngủ">
+            <p><small>↑ Ví dụ khi ảnh không tải được, văn bản alt sẽ hiển thị</small></p>
+        </div>
+
+        <h3>3. width và height (tùy chọn)</h3>
+        <p>Kích thước của ảnh (đơn vị pixel):</p>
+        <pre><code>&lt;img src="logo.png" width="200" height="100"&gt;</code></pre>
+
+        <h2>Định dạng ảnh phổ biến</h2>
+        <div class="image-formats">
+            <div class="format-card">
+                <h4>JPG/JPEG</h4>
+                <p>Ảnh chụp, hình ảnh có nhiều màu sắc</p>
+            </div>
+            <div class="format-card">
+                <h4>PNG</h4>
+                <p>Ảnh có nền trong suốt, logo</p>
+            </div>
+            <div class="format-card">
+                <h4>GIF</h4>
+                <p>Ảnh động đơn giản</p>
+            </div>
+            <div class="format-card">
+                <h4>SVG</h4>
+                <p>Logo, icon, hình vector</p>
+            </div>
+            <div class="format-card">
+                <h4>WebP</h4>
+                <p>Định dạng hiện đại, kích thước nhỏ</p>
+            </div>
+        </div>
+
+        <h2>Thẻ figure và figcaption</h2>
+        <p>Sử dụng để thêm chú thích cho ảnh:</p>
+        <pre><code>&lt;figure&gt;
+    &lt;img src="mountain.jpg" alt="Núi Phú Sĩ trong hoàng hôn"&gt;
+    &lt;figcaption&gt;Hoàng hôn trên đỉnh Phú Sĩ&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+        <figure>
+            <img src="https://via.placeholder.com/400x300" alt="Ảnh minh họa">
+            <figcaption>Ví dụ về chú thích ảnh với figure và figcaption</figcaption>
+        </figure>
+
+        <h2>Lưu ý quan trọng</h2>
+        <div class="note">
+            <ul>
+                <li>Luôn sử dụng thuộc tính alt</li>
+                <li>Tối ưu kích thước ảnh trước khi sử dụng</li>
+                <li>Đặt tên file ảnh có ý nghĩa</li>
+                <li>Sử dụng đúng định dạng ảnh cho từng mục đích</li>
+                <li>Cân nhắc sử dụng thẻ figure và figcaption để thêm chú thích</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="example.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>

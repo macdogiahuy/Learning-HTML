@@ -55,16 +55,29 @@
         }
         .topic-links {
             margin-top: 15px;
+            display: flex;
+            gap: 10px;
         }
         .topic-links a {
-            display: block;
-            color: #2196F3;
+            flex: 1;
+            color: white;
             text-decoration: none;
-            padding: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
         }
-        .topic-links a:hover {
-            color: #1976D2;
-            text-decoration: underline;
+        .theory-link {
+            background-color: #2196F3;
+        }
+        .theory-link:hover {
+            background-color: #1976D2;
+        }
+        .practice-link {
+            background-color: #4CAF50;
+        }
+        .practice-link:hover {
+            background-color: #388E3C;
         }
         .description {
             color: #666;
@@ -76,6 +89,13 @@
             padding: 20px;
             color: #666;
         }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #ff9800;
+        }
     </style>
 </head>
 <body>
@@ -83,6 +103,15 @@
         <h1>Học HTML Cơ Bản</h1>
         <p>Hướng dẫn từng bước với ví dụ thực tế</p>
     </header>
+
+    <div class="note">
+        <strong>Hướng dẫn:</strong>
+        <ul>
+            <li>Nhấn vào "Lý thuyết" để đọc giải thích chi tiết về chủ đề</li>
+            <li>Nhấn vào "Thực hành" để xem ví dụ và code mẫu</li>
+            <li>Học theo thứ tự từ chủ đề 1 đến 9 để hiểu rõ nhất</li>
+        </ul>
+    </div>
 
     <main class="topic-grid">
         <!-- Cấu trúc HTML -->
@@ -95,8 +124,8 @@
                 Tìm hiểu về cấu trúc cơ bản của một trang HTML và các thẻ thiết yếu.
             </p>
             <div class="topic-links">
-                <a href="01-structure/README.md">📚 Lý thuyết</a>
-                <a href="01-structure/index.html">💻 Thực hành</a>
+                <a href="01-structure/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="01-structure/index.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -110,8 +139,8 @@
                 Học cách sử dụng các thẻ văn bản và tiêu đề để tạo nội dung có cấu trúc.
             </p>
             <div class="topic-links">
-                <a href="02-text/README.md">📚 Lý thuyết</a>
-                <a href="02-text/example.html">💻 Thực hành</a>
+                <a href="02-text/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="02-text/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -125,8 +154,8 @@
                 Tạo liên kết giữa các trang và phần khác nhau trong trang web.
             </p>
             <div class="topic-links">
-                <a href="03-links/README.md">📚 Lý thuyết</a>
-                <a href="03-links/example.html">💻 Thực hành</a>
+                <a href="03-links/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="03-links/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -140,8 +169,8 @@
                 Thêm và tùy chỉnh hình ảnh trong trang web của bạn.
             </p>
             <div class="topic-links">
-                <a href="04-images/README.md">📚 Lý thuyết</a>
-                <a href="04-images/example.html">💻 Thực hành</a>
+                <a href="04-images/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="04-images/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -155,8 +184,8 @@
                 Tạo danh sách có thứ tự và không có thứ tự.
             </p>
             <div class="topic-links">
-                <a href="05-lists/README.md">📚 Lý thuyết</a>
-                <a href="05-lists/example.html">💻 Thực hành</a>
+                <a href="05-lists/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="05-lists/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -170,8 +199,8 @@
                 Hiển thị dữ liệu dưới dạng bảng có cấu trúc.
             </p>
             <div class="topic-links">
-                <a href="06-tables/README.md">📚 Lý thuyết</a>
-                <a href="06-tables/example.html">💻 Thực hành</a>
+                <a href="06-tables/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="06-tables/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -185,8 +214,8 @@
                 Tạo form để thu thập thông tin từ người dùng.
             </p>
             <div class="topic-links">
-                <a href="07-forms/README.md">📚 Lý thuyết</a>
-                <a href="07-forms/example.html">💻 Thực hành</a>
+                <a href="07-forms/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="07-forms/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -200,8 +229,8 @@
                 Sử dụng các thẻ HTML có ý nghĩa để cải thiện SEO và khả năng tiếp cận.
             </p>
             <div class="topic-links">
-                <a href="08-semantic/README.md">📚 Lý thuyết</a>
-                <a href="08-semantic/example.html">💻 Thực hành</a>
+                <a href="08-semantic/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="08-semantic/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
 
@@ -215,8 +244,8 @@
                 Thêm audio và video vào trang web của bạn.
             </p>
             <div class="topic-links">
-                <a href="09-media/README.md">📚 Lý thuyết</a>
-                <a href="09-media/example.html">💻 Thực hành</a>
+                <a href="09-media/theory.html" class="theory-link">📚 Lý thuyết</a>
+                <a href="09-media/example.html" class="practice-link">💻 Thực hành</a>
             </div>
         </div>
     </main>

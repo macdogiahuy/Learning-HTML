@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thẻ HTML Semantic (Ngữ nghĩa) - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2, h3 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .example-output {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 10px 0;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .benefit-card {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .semantic-preview {
+            border: 1px solid #ddd;
+            padding: 0;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .semantic-preview header {
+            background: #f5f5f5;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .semantic-preview nav {
+            background: #eee;
+            padding: 10px;
+        }
+        .semantic-preview main {
+            padding: 15px;
+        }
+        .semantic-preview aside {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 1px solid #ddd;
+        }
+        .semantic-preview footer {
+            background: #f5f5f5;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Thẻ HTML Semantic (Ngữ nghĩa)</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>Thẻ semantic trong HTML là những thẻ mang ý nghĩa về mặt nội dung, giúp định nghĩa rõ ràng vai trò của từng phần trong trang web. Việc sử dụng thẻ semantic giúp tăng khả năng tiếp cận, tối ưu SEO và dễ dàng bảo trì code.</p>
+
+        <h2>Các thẻ semantic phổ biến</h2>
+
+        <div class="semantic-preview">
+            <header>
+                <h3>1. header</h3>
+                <pre><code>&lt;header&gt;
+    &lt;h1&gt;Tiêu đề trang&lt;/h1&gt;
+    &lt;nav&gt;Menu điều hướng&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            </header>
+
+            <nav>
+                <h3>2. nav</h3>
+                <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Trang chủ&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;Giới thiệu&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </nav>
+
+            <main>
+                <h3>3. main</h3>
+                <pre><code>&lt;main&gt;
+    &lt;h1&gt;Nội dung chính&lt;/h1&gt;
+    &lt;p&gt;Đây là phần nội dung chính của trang.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+
+                <h3>4. article</h3>
+                <pre><code>&lt;article&gt;
+    &lt;h2&gt;Tiêu đề bài viết&lt;/h2&gt;
+    &lt;p&gt;Nội dung bài viết...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+                <h3>5. section</h3>
+                <pre><code>&lt;section&gt;
+    &lt;h2&gt;Phần nội dung&lt;/h2&gt;
+    &lt;p&gt;Nội dung của phần này...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+            </main>
+
+            <aside>
+                <h3>6. aside</h3>
+                <pre><code>&lt;aside&gt;
+    &lt;h3&gt;Nội dung phụ&lt;/h3&gt;
+    &lt;p&gt;Thông tin bổ sung...&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+            </aside>
+
+            <footer>
+                <h3>7. footer</h3>
+                <pre><code>&lt;footer&gt;
+    &lt;p&gt;Thông tin liên hệ&lt;/p&gt;
+    &lt;p&gt;Copyright © 2024&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </footer>
+        </div>
+
+        <h3>8. Thẻ semantic khác</h3>
+        <ul>
+            <li><code>&lt;figure&gt;</code> và <code>&lt;figcaption&gt;</code>: Nhóm hình ảnh và chú thích</li>
+            <li><code>&lt;time&gt;</code>: Định dạng thời gian</li>
+            <li><code>&lt;mark&gt;</code>: Đánh dấu văn bản</li>
+            <li><code>&lt;details&gt;</code> và <code>&lt;summary&gt;</code>: Tạo nội dung có thể mở rộng</li>
+        </ul>
+
+        <h2>So sánh với thẻ không semantic</h2>
+        <div class="comparison">
+            <div>
+                <h3>Semantic:</h3>
+                <pre><code>&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Trang chủ&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            </div>
+            <div>
+                <h3>Không semantic:</h3>
+                <pre><code>&lt;div class="header"&gt;
+    &lt;div class="nav"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Trang chủ&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <h2>Lợi ích của thẻ semantic</h2>
+        <div class="benefits">
+            <div class="benefit-card">
+                <h4>Tăng khả năng tiếp cận</h4>
+                <ul>
+                    <li>Giúp người dùng khiếm thị hiểu cấu trúc trang</li>
+                    <li>Hỗ trợ công nghệ đọc màn hình</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h4>Tối ưu SEO</h4>
+                <ul>
+                    <li>Giúp máy tìm kiếm hiểu nội dung</li>
+                    <li>Cải thiện thứ hạng tìm kiếm</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h4>Code dễ đọc</h4>
+                <ul>
+                    <li>Cấu trúc rõ ràng</li>
+                    <li>Dễ bảo trì và phát triển</li>
+                </ul>
+            </div>
+            <div class="benefit-card">
+                <h4>Tương thích thiết bị</h4>
+                <ul>
+                    <li>Hiển thị tốt trên nhiều thiết bị</li>
+                    <li>Dễ dàng tùy chỉnh style</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Lưu ý quan trọng</h2>
+        <div class="note">
+            <ol>
+                <li>Sử dụng thẻ semantic phù hợp với nội dung</li>
+                <li>Không lạm dụng các thẻ <code>&lt;div&gt;</code> và <code>&lt;span&gt;</code></li>
+                <li>Đảm bảo cấu trúc HTML có ý nghĩa</li>
+                <li>Kết hợp với ARIA roles khi cần thiết</li>
+                <li>Ưu tiên semantic HTML thay vì dựa vào class/id</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="example.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>

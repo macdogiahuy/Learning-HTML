@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên kết trong HTML - Lý thuyết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h1, h2 {
+            color: #2196F3;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .example-output {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+    <div class="content">
+        <h1>Liên kết trong HTML</h1>
+
+        <h2>Giới thiệu</h2>
+        <p>Thẻ <code>&lt;a&gt;</code> (anchor) được sử dụng để tạo liên kết trong HTML, cho phép người dùng di chuyển giữa các trang web hoặc đến các phần khác nhau trong cùng một trang.</p>
+
+        <h2>Cú pháp cơ bản</h2>
+        <pre><code>&lt;a href="url"&gt;Nội dung liên kết&lt;/a&gt;</code></pre>
+
+        <h2>Các loại liên kết</h2>
+
+        <h3>1. Liên kết ngoài (External Links)</h3>
+        <pre><code>&lt;a href="https://www.example.com"&gt;Truy cập website&lt;/a&gt;</code></pre>
+        <div class="example-output">
+            <a href="https://www.example.com">Truy cập website</a>
+        </div>
+
+        <h3>2. Liên kết nội bộ (Internal Links)</h3>
+        <pre><code>&lt;a href="/trang-chu.html"&gt;Trang chủ&lt;/a&gt;</code></pre>
+        <div class="example-output">
+            <a href="#">Trang chủ</a>
+        </div>
+
+        <h3>3. Liên kết trong trang (Anchor Links)</h3>
+        <pre><code>&lt;a href="#section1"&gt;Đến phần 1&lt;/a&gt;</code></pre>
+        <div class="example-output">
+            <a href="#section1">Đến phần 1</a>
+        </div>
+
+        <h3>4. Liên kết Email</h3>
+        <pre><code>&lt;a href="mailto:email@example.com"&gt;Gửi email&lt;/a&gt;</code></pre>
+        <div class="example-output">
+            <a href="mailto:email@example.com">Gửi email</a>
+        </div>
+
+        <h3>5. Liên kết điện thoại</h3>
+        <pre><code>&lt;a href="tel:+84123456789"&gt;Gọi điện&lt;/a&gt;</code></pre>
+        <div class="example-output">
+            <a href="tel:+84123456789">Gọi điện</a>
+        </div>
+
+        <h2>Thuộc tính quan trọng</h2>
+        <ul>
+            <li><code>href</code>: Địa chỉ liên kết</li>
+            <li><code>target</code>: Cách mở liên kết (<code>_blank</code>, <code>_self</code>, <code>_parent</code>, <code>_top</code>)</li>
+            <li><code>title</code>: Mô tả khi di chuột qua</li>
+            <li><code>rel</code>: Mối quan hệ với trang đích</li>
+        </ul>
+
+        <h2>Ví dụ mở rộng</h2>
+        <pre><code>&lt;a href="https://google.com" target="_blank" title="Mở Google"&gt;
+    Truy cập Google trong tab mới
+&lt;/a&gt;</code></pre>
+        <div class="example-output">
+            <a href="https://google.com" target="_blank" title="Mở Google">
+                Truy cập Google trong tab mới
+            </a>
+        </div>
+
+        <h2>Lưu ý quan trọng</h2>
+        <div class="note">
+            <ul>
+                <li>Luôn sử dụng <code>target="_blank"</code> và <code>rel="noopener noreferrer"</code> khi mở liên kết trong tab mới</li>
+                <li>Đảm bảo văn bản liên kết có ý nghĩa (tránh dùng "Click here")</li>
+                <li>Sử dụng đường dẫn tương đối cho liên kết nội bộ</li>
+                <li>Tạo sự khác biệt trực quan cho liên kết (màu sắc, gạch chân)</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <a href="example.html" class="back-link">Xem ví dụ thực hành →</a>
+        </div>
+    </div>
+</body>
+</html>
