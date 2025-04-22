@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành với Form HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .example-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+        button[type="reset"]:hover {
+            background-color: #da190b;
+        }
+        fieldset {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        .required::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực hành với Form HTML</h1>
+
+    <!-- Form đăng ký cơ bản -->
+    <div class="example-section">
+        <h2>Form Đăng ký</h2>
+        <form action="#" method="post" id="registration-form">
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                
+                <label for="fullname" class="required">Họ và tên</label>
+                <input type="text" id="fullname" name="fullname" required 
+                       placeholder="Nhập họ và tên của bạn">
+
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" required
+                       placeholder="example@domain.com">
+
+                <label for="password" class="required">Mật khẩu</label>
+                <input type="password" id="password" name="password" required
+                       minlength="8" placeholder="Tối thiểu 8 ký tự">
+
+                <label for="birthday">Ngày sinh</label>
+                <input type="date" id="birthday" name="birthday">
+
+                <label>Giới tính</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Nam</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Nữ</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Thông tin bổ sung</legend>
+
+                <label for="city">Thành phố</label>
+                <select id="city" name="city">
+                    <option value="">-- Chọn thành phố --</option>
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="hcm">TP. Hồ Chí Minh</option>
+                    <option value="danang">Đà Nẵng</option>
+                    <option value="cantho">Cần Thơ</option>
+                </select>
+
+                <label>Sở thích</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hobby1" name="hobbies[]" value="reading">
+                    <label for="hobby1">Đọc sách</label>
+                    <input type="checkbox" id="hobby2" name="hobbies[]" value="music">
+                    <label for="hobby2">Âm nhạc</label>
+                    <input type="checkbox" id="hobby3" name="hobbies[]" value="sports">
+                    <label for="hobby3">Thể thao</label>
+                </div>
+
+                <label for="avatar">Ảnh đại diện</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*">
+
+                <label for="bio">Giới thiệu bản thân</label>
+                <textarea id="bio" name="bio" rows="4" 
+                          placeholder="Hãy chia sẻ đôi điều về bản thân bạn"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Xác nhận</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree" class="required">
+                        Tôi đồng ý với các điều khoản và điều kiện
+                    </label>
+                </div>
+            </fieldset>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Đăng ký</button>
+                <button type="reset">Xóa form</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Form tìm kiếm đơn giản -->
+    <div class="example-section">
+        <h2>Form Tìm kiếm</h2>
+        <form action="#" method="get" id="search-form">
+            <div style="display: flex; gap: 10px;">
+                <input type="search" name="search" placeholder="Nhập từ khóa..."
+                       style="flex: 1;">
+                <button type="submit">Tìm kiếm</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Form liên hệ -->
+    <div class="example-section">
+        <h2>Form Liên hệ</h2>
+        <form action="#" method="post" id="contact-form">
+            <label for="contact-name" class="required">Họ tên</label>
+            <input type="text" id="contact-name" name="contact-name" required>
+
+            <label for="contact-email" class="required">Email</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+
+            <label for="subject">Chủ đề</label>
+            <select id="subject" name="subject">
+                <option value="general">Câu hỏi chung</option>
+                <option value="support">Hỗ trợ kỹ thuật</option>
+                <option value="billing">Thanh toán</option>
+            </select>
+
+            <label for="message" class="required">Nội dung</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Gửi tin nhắn</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

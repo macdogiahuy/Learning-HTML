@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành với Hình ảnh HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .example-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        figure {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            text-align: center;
+        }
+        figcaption {
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+        .img-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực hành với Hình ảnh HTML</h1>
+
+    <!-- Hình ảnh cơ bản -->
+    <div class="example-section">
+        <h2>Hình ảnh cơ bản</h2>
+        <img src="https://via.placeholder.com/300x200" 
+             alt="Hình ảnh mẫu 300x200"
+             width="300" 
+             height="200">
+    </div>
+
+    <!-- Hình ảnh có chú thích -->
+    <div class="example-section">
+        <h2>Hình ảnh có chú thích</h2>
+        <figure>
+            <img src="https://via.placeholder.com/400x300/ff9800/ffffff" 
+                 alt="Hình ảnh có chú thích"
+                 width="400" 
+                 height="300">
+            <figcaption>Đây là chú thích cho hình ảnh sử dụng thẻ figcaption</figcaption>
+        </figure>
+    </div>
+
+    <!-- Hình ảnh responsive -->
+    <div class="example-section">
+        <h2>Hình ảnh responsive</h2>
+        <p>Hình ảnh này sẽ tự điều chỉnh kích thước theo màn hình:</p>
+        <img src="https://via.placeholder.com/800x400/2196F3/ffffff" 
+             alt="Hình ảnh responsive"
+             class="responsive-img">
+    </div>
+
+    <!-- Bộ sưu tập hình ảnh -->
+    <div class="example-section">
+        <h2>Bộ sưu tập hình ảnh</h2>
+        <div class="img-gallery">
+            <img src="https://via.placeholder.com/200x200/4CAF50/ffffff" 
+                 alt="Hình ảnh 1"
+                 width="200" 
+                 height="200">
+            <img src="https://via.placeholder.com/200x200/f44336/ffffff" 
+                 alt="Hình ảnh 2"
+                 width="200" 
+                 height="200">
+            <img src="https://via.placeholder.com/200x200/9C27B0/ffffff" 
+                 alt="Hình ảnh 3"
+                 width="200" 
+                 height="200">
+        </div>
+    </div>
+
+    <!-- Hình ảnh làm link -->
+    <div class="example-section">
+        <h2>Hình ảnh làm link</h2>
+        <a href="https://example.com">
+            <img src="https://via.placeholder.com/200x100/607D8B/ffffff" 
+                 alt="Nhấp vào hình ảnh để truy cập website"
+                 width="200" 
+                 height="100">
+        </a>
+    </div>
+
+    <!-- Ví dụ về lỗi hình ảnh -->
+    <div class="example-section">
+        <h2>Khi hình ảnh không tải được</h2>
+        <img src="image-khong-ton-tai.jpg" 
+             alt="Văn bản alt sẽ hiển thị khi ảnh không tải được"
+             width="300" 
+             height="200">
+    </div>
+</body>
+</html>

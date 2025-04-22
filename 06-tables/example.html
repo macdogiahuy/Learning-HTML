@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành với Bảng HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .example-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        caption {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .striped tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .hover-effect tr:hover {
+            background-color: #f5f5f5;
+        }
+        .responsive-table {
+            overflow-x: auto;
+        }
+        .highlight {
+            background-color: #fff3e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực hành với Bảng HTML</h1>
+
+    <!-- Bảng cơ bản -->
+    <div class="example-section">
+        <h2>Bảng cơ bản</h2>
+        <table>
+            <caption>Danh sách sản phẩm</caption>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laptop</td>
+                    <td>15.000.000đ</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td>8.000.000đ</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Tai nghe</td>
+                    <td>500.000đ</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><strong>Tổng số lượng:</strong></td>
+                    <td><strong>35</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Bảng gộp ô -->
+    <div class="example-section">
+        <h2>Bảng gộp ô</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Thời gian</th>
+                    <th colspan="2">Lịch học</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Sáng</td>
+                    <td>HTML</td>
+                    <td>CSS</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>PHP</td>
+                </tr>
+                <tr>
+                    <td>Chiều</td>
+                    <td colspan="2">Thực hành</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bảng có hiệu ứng -->
+    <div class="example-section">
+        <h2>Bảng có hiệu ứng</h2>
+        <table class="striped hover-effect">
+            <thead>
+                <tr>
+                    <th>Học viên</th>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>JavaScript</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>Trần Thị B</td>
+                    <td>95</td>
+                    <td>92</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Lê Văn C</td>
+                    <td>88</td>
+                    <td>86</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Phạm Thị D</td>
+                    <td>92</td>
+                    <td>89</td>
+                    <td>91</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bảng phức tạp -->
+    <div class="example-section">
+        <h2>Bảng phức tạp</h2>
+        <div class="responsive-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Khóa học</th>
+                        <th colspan="2">Thời gian</th>
+                        <th colspan="2">Học phí</th>
+                    </tr>
+                    <tr>
+                        <th>Bắt đầu</th>
+                        <th>Kết thúc</th>
+                        <th>Cơ bản</th>
+                        <th>Nâng cao</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>01/06/2024</td>
+                        <td>30/06/2024</td>
+                        <td>3.000.000đ</td>
+                        <td>5.000.000đ</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>01/07/2024</td>
+                        <td>31/07/2024</td>
+                        <td>4.000.000đ</td>
+                        <td>6.000.000đ</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Trọn bộ</td>
+                        <td>01/06/2024</td>
+                        <td>31/07/2024</td>
+                        <td colspan="2">8.000.000đ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

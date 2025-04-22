@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học HTML Cơ Bản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #2196F3;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .topic-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+        }
+        .topic-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        .topic-links {
+            margin-top: 15px;
+        }
+        .topic-links a {
+            display: block;
+            color: #2196F3;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+        .topic-links a:hover {
+            color: #1976D2;
+            text-decoration: underline;
+        }
+        .description {
+            color: #666;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Học HTML Cơ Bản</h1>
+        <p>Hướng dẫn từng bước với ví dụ thực tế</p>
+    </header>
+
+    <main class="topic-grid">
+        <!-- Cấu trúc HTML -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">1</span>
+                Cấu trúc HTML
+            </h2>
+            <p class="description">
+                Tìm hiểu về cấu trúc cơ bản của một trang HTML và các thẻ thiết yếu.
+            </p>
+            <div class="topic-links">
+                <a href="01-structure/README.md">📚 Lý thuyết</a>
+                <a href="01-structure/index.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Văn bản và Tiêu đề -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">2</span>
+                Văn bản và Tiêu đề
+            </h2>
+            <p class="description">
+                Học cách sử dụng các thẻ văn bản và tiêu đề để tạo nội dung có cấu trúc.
+            </p>
+            <div class="topic-links">
+                <a href="02-text/README.md">📚 Lý thuyết</a>
+                <a href="02-text/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Liên kết -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">3</span>
+                Liên kết
+            </h2>
+            <p class="description">
+                Tạo liên kết giữa các trang và phần khác nhau trong trang web.
+            </p>
+            <div class="topic-links">
+                <a href="03-links/README.md">📚 Lý thuyết</a>
+                <a href="03-links/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Hình ảnh -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">4</span>
+                Hình ảnh
+            </h2>
+            <p class="description">
+                Thêm và tùy chỉnh hình ảnh trong trang web của bạn.
+            </p>
+            <div class="topic-links">
+                <a href="04-images/README.md">📚 Lý thuyết</a>
+                <a href="04-images/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Danh sách -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">5</span>
+                Danh sách
+            </h2>
+            <p class="description">
+                Tạo danh sách có thứ tự và không có thứ tự.
+            </p>
+            <div class="topic-links">
+                <a href="05-lists/README.md">📚 Lý thuyết</a>
+                <a href="05-lists/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Bảng -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">6</span>
+                Bảng
+            </h2>
+            <p class="description">
+                Hiển thị dữ liệu dưới dạng bảng có cấu trúc.
+            </p>
+            <div class="topic-links">
+                <a href="06-tables/README.md">📚 Lý thuyết</a>
+                <a href="06-tables/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">7</span>
+                Form
+            </h2>
+            <p class="description">
+                Tạo form để thu thập thông tin từ người dùng.
+            </p>
+            <div class="topic-links">
+                <a href="07-forms/README.md">📚 Lý thuyết</a>
+                <a href="07-forms/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Semantic HTML -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">8</span>
+                Semantic HTML
+            </h2>
+            <p class="description">
+                Sử dụng các thẻ HTML có ý nghĩa để cải thiện SEO và khả năng tiếp cận.
+            </p>
+            <div class="topic-links">
+                <a href="08-semantic/README.md">📚 Lý thuyết</a>
+                <a href="08-semantic/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+
+        <!-- Media -->
+        <div class="topic-card">
+            <h2>
+                <span class="topic-number">9</span>
+                Media
+            </h2>
+            <p class="description">
+                Thêm audio và video vào trang web của bạn.
+            </p>
+            <div class="topic-links">
+                <a href="09-media/README.md">📚 Lý thuyết</a>
+                <a href="09-media/example.html">💻 Thực hành</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Tài liệu học HTML cơ bản - Được tạo với ❤️ để giúp bạn học HTML dễ dàng hơn</p>
+    </footer>
+</body>
+</html>

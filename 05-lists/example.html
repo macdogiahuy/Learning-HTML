@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành với Danh sách HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .example-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .nav-menu {
+            background-color: #f8f9fa;
+            padding: 15px;
+        }
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-menu ul li {
+            margin: 5px 0;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+        }
+        .nav-menu a:hover {
+            color: #007bff;
+        }
+        .custom-list {
+            list-style-type: '🎯 ';
+        }
+        dl {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        dt {
+            font-weight: bold;
+            color: #2196F3;
+            margin-top: 10px;
+        }
+        dd {
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực hành với Danh sách HTML</h1>
+
+    <!-- Danh sách không có thứ tự cơ bản -->
+    <div class="example-section">
+        <h2>Danh sách không có thứ tự (ul)</h2>
+        <ul>
+            <li>Cà phê</li>
+            <li>Trà sữa</li>
+            <li>Nước cam</li>
+            <li>Sinh tố</li>
+        </ul>
+    </div>
+
+    <!-- Danh sách có thứ tự -->
+    <div class="example-section">
+        <h2>Danh sách có thứ tự (ol)</h2>
+        <h3>Cách pha cà phê:</h3>
+        <ol>
+            <li>Đun sôi nước</li>
+            <li>Cho cà phê vào phin</li>
+            <li>Đổ nước sôi vào phin</li>
+            <li>Đợi cà phê nhỏ giọt</li>
+            <li>Thêm đường hoặc sữa tùy thích</li>
+        </ol>
+
+        <h3>Với kiểu đánh số khác:</h3>
+        <ol type="A">
+            <li>Mục A</li>
+            <li>Mục B</li>
+            <li>Mục C</li>
+        </ol>
+    </div>
+
+    <!-- Danh sách lồng nhau -->
+    <div class="example-section">
+        <h2>Danh sách lồng nhau</h2>
+        <ul>
+            <li>Trái cây
+                <ul>
+                    <li>Táo
+                        <ul>
+                            <li>Táo xanh</li>
+                            <li>Táo đỏ</li>
+                        </ul>
+                    </li>
+                    <li>Cam</li>
+                    <li>Chuối</li>
+                </ul>
+            </li>
+            <li>Rau củ
+                <ul>
+                    <li>Cà rốt</li>
+                    <li>Khoai tây</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Menu điều hướng -->
+    <div class="example-section">
+        <h2>Menu điều hướng</h2>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#trang-chu">Trang chủ</a></li>
+                <li><a href="#san-pham">Sản phẩm</a></li>
+                <li><a href="#dich-vu">Dịch vụ</a></li>
+                <li><a href="#lien-he">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Danh sách với CSS tùy chỉnh -->
+    <div class="example-section">
+        <h2>Danh sách tùy chỉnh</h2>
+        <ul class="custom-list">
+            <li>Mục tiêu 1</li>
+            <li>Mục tiêu 2</li>
+            <li>Mục tiêu 3</li>
+        </ul>
+    </div>
+
+    <!-- Danh sách mô tả -->
+    <div class="example-section">
+        <h2>Danh sách mô tả (dl, dt, dd)</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Ngôn ngữ đánh dấu siêu văn bản, được sử dụng để tạo cấu trúc cho trang web.</dd>
+
+            <dt>CSS</dt>
+            <dd>Ngôn ngữ tạo kiểu cho trang web, giúp trang web trở nên đẹp và hấp dẫn hơn.</dd>
+
+            <dt>JavaScript</dt>
+            <dd>Ngôn ngữ lập trình được sử dụng để tạo tương tác động cho trang web.</dd>
+        </dl>
+    </div>
+</body>
+</html>

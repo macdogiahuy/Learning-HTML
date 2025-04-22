@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành với Media HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .example-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .media-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        video, audio {
+            max-width: 100%;
+        }
+        .playlist {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .playlist-item:hover {
+            background-color: #e3f2fd;
+        }
+        .note {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 10px 0;
+        }
+        iframe {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực hành với Media HTML</h1>
+
+    <!-- Video Example -->
+    <div class="example-section">
+        <h2>Video HTML5</h2>
+        <div class="media-container">
+            <video controls poster="https://via.placeholder.com/800x450/333/fff?text=Video+Poster"
+                   width="800" height="450">
+                <source src="https://file-examples.com/storage/fef1706276640f011b010c3/2017/04/file_example_MP4_480_1_5MG.mp4" 
+                        type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                Trình duyệt của bạn không hỗ trợ video HTML5.
+            </video>
+            
+            <div class="note">
+                <p><strong>Lưu ý:</strong> Đây là ví dụ sử dụng video mẫu. 
+                Trong thực tế, bạn cần sử dụng video của riêng mình.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Example -->
+    <div class="example-section">
+        <h2>Audio HTML5</h2>
+        <div class="media-container">
+            <audio controls>
+                <source src="https://file-examples.com/storage/fef1706276640f011b010c3/2017/11/file_example_MP3_700KB.mp3" 
+                        type="audio/mpeg">
+                <source src="audio.ogg" type="audio/ogg">
+                Trình duyệt của bạn không hỗ trợ audio HTML5.
+            </audio>
+
+            <!-- Simple Audio Playlist -->
+            <div class="playlist">
+                <h3>Danh sách phát</h3>
+                <div class="playlist-item">
+                    <span>🎵</span>
+                    <span style="margin-left: 10px">Bài hát mẫu 1</span>
+                </div>
+                <div class="playlist-item">
+                    <span>🎵</span>
+                    <span style="margin-left: 10px">Bài hát mẫu 2</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Embed -->
+    <div class="example-section">
+        <h2>Video YouTube</h2>
+        <div class="media-container">
+            <iframe width="800" height="450"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Advanced Video Example -->
+    <div class="example-section">
+        <h2>Video với Tùy chọn Nâng cao</h2>
+        <div class="media-container">
+            <video controls autoplay muted loop
+                   poster="https://via.placeholder.com/800x450/666/fff?text=Advanced+Video"
+                   width="800" height="450">
+                <source src="https://file-examples.com/storage/fef1706276640f011b010c3/2017/04/file_example_MP4_480_1_5MG.mp4" 
+                        type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video HTML5.
+            </video>
+
+            <div class="note">
+                <h4>Thuộc tính được sử dụng:</h4>
+                <ul>
+                    <li><code>controls</code>: Hiển thị thanh điều khiển</li>
+                    <li><code>autoplay</code>: Tự động phát</li>
+                    <li><code>muted</code>: Tắt tiếng (cần thiết cho autoplay)</li>
+                    <li><code>loop</code>: Phát lặp lại</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Picture-in-Picture Example -->
+    <div class="example-section">
+        <h2>Video với Picture-in-Picture</h2>
+        <div class="media-container">
+            <video controls
+                   poster="https://via.placeholder.com/800x450/999/fff?text=PiP+Video"
+                   width="800" height="450"
+                   pip="true">
+                <source src="https://file-examples.com/storage/fef1706276640f011b010c3/2017/04/file_example_MP4_480_1_5MG.mp4" 
+                        type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video HTML5.
+            </video>
+
+            <div class="note">
+                <p><strong>Picture-in-Picture:</strong> 
+                Trong các trình duyệt hỗ trợ, bạn có thể click chuột phải vào video 
+                và chọn "Picture in Picture" để xem video trong cửa sổ nhỏ.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
